@@ -26,10 +26,6 @@ type Job struct {
 func main() {
     // URL koneksi database PostgreSQL
     dbURL := "postgres://postgres:12082001@localhost:5432/employee_db?sslmode=disable"
-     // Jika ada variabel lingkungan DATABASE_URL, gunakan nilainya
-    if envDBURL := os.Getenv("DATABASE_URL"); envDBURL != "" {
-        dbURL = envDBURL
-    }
 
     // Buka koneksi ke database
     db, err := sql.Open("postgres", dbURL)

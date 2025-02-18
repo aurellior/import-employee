@@ -2,7 +2,6 @@
 require("dotenv").config(); // Memuat variabel lingkungan dari file .env
 const express = require("express"); // Mengimpor Express.js untuk membuat server
 const multer = require("multer"); // Mengimpor Multer untuk menangani upload file
-const cors = require("cors"); // Mengimpor CORS agar API bisa diakses dari domain lain
 const { Pool } = require("pg"); // Mengimpor modul PostgreSQL untuk koneksi database
 const fs = require("fs"); // Mengimpor modul File System untuk mengelola file
 const path = require("path"); // Mengimpor modul Path untuk mengelola path file dan direktori
@@ -13,7 +12,6 @@ const app = express();
 const port = process.env.PORT || 3000; // Menggunakan port dari environment atau default 3000
 
 // Middleware untuk menangani request
-app.use(cors()); // Mengaktifkan CORS agar API dapat diakses dari domain lain
 app.use(express.json()); // Middleware untuk membaca request dalam format JSON
 
 // Menyediakan file statis dari folder public
