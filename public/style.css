@@ -1,0 +1,117 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.upload-area {
+  background: white;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.upload-area.drag-over {
+  border-color: #2196f3;
+  background: #e3f2fd;
+}
+
+.upload-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.upload-button {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.upload-button:hover {
+  background: #1976d2;
+}
+
+.file-info {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-container {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.progress-header h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.percentage {
+  font-weight: bold;
+  color: #2196f3;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #2196f3;
+  transition: width 0.3s ease;
+}
+
+.status {
+  margin-top: 0.8rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.success {
+  color: #4caf50;
+}
+
+.error {
+  color: #f44336;
+}

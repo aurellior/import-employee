@@ -1,0 +1,62 @@
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Import Data Karyawan</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Import Data Karyawan</h1>
+
+      <!-- Upload Area -->
+      <div class="upload-area">
+        <p>Upload file CSV di sini</p>
+        <button
+          class="upload-button"
+          onclick="document.getElementById('fileInput').click()"
+        >
+          Pilih File
+        </button>
+        <input type="file" id="fileInput" accept=".csv" style="display: none" />
+      </div>
+
+      <!-- Progress Areas -->
+      <div class="progress-container" id="uploadProgress" style="display: none">
+        <div class="progress-header">
+          <h3>Upload Progress</h3>
+          <span class="percentage" id="uploadPercentage">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="uploadProgressBar"></div>
+        </div>
+        <p class="status" id="uploadStatus">Menunggu...</p>
+      </div>
+
+      <div class="progress-container" id="importProgress" style="display: none">
+        <div class="progress-header">
+          <h3>Import Progress</h3>
+          <span class="percentage" id="importPercentage">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="importProgressBar"></div>
+        </div>
+        <p class="status" id="importStatus">Menunggu...</p>
+      </div>
+
+      <div>
+        <h1>Data Karyawan</h1>
+
+        <div id="employeesList"></div>
+
+        <div id="pagination">
+          <button id="prevBtn">Previous</button>
+          <span id="pageInfo">Page 1</span>
+          <button id="nextBtn">Next</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
